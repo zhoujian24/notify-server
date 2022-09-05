@@ -66,14 +66,14 @@ ${tips}\n`
   }
 
   // 最高温度
-  if (CONFIG.weather_tem && lowest && +lowest.replace('℃', '') >= 20) {
+  if (CONFIG.weather_tem && highest && +highest.replace('℃', '') >= 30) {
     description += `
 哈喽哈喽~这里是来自${CONFIG.boy_name}的爱心提醒哦：
-今日最低温度为🥵 ${lowest}，可热可热了~
+今日最高温度为🥵 ${highest}，可热可热了~
 ${CONFIG.girl_name}可要注意防晒哦~\n`
   }
     
-  elfe
+  else
   {
   if (CONFIG.weather_tem && highest && +highest.replace('℃', '') <= 15) {
     description += `
@@ -94,8 +94,7 @@ ${CONFIG.girl_name}可要注意保暖哦~\n`
   //   }
 
   // 内容末尾，自定义
-  description += `
-  [ 点我有惊喜 ] ❤️ 🧡 💛 💚 💖`
+  
 
   const title = `这是我们相识的第 ${dateLength} 天`
 
