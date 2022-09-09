@@ -6,10 +6,10 @@ on:
   schedule:
     # `分 时 天 月 周` 时按照标准时间 北京时间=标准时间+8 18表示北京时间早上2点
     - cron: '50 3 * * *'
-  #on:
-  # push:
-  #   branches:
-  #     - master
+# on:
+#   push:
+#     branches:
+#       - master
 
 jobs:
   build:
@@ -19,10 +19,10 @@ jobs:
       # 1. checkout 仓库
       - uses: actions/checkout@v2
 
-      - name: Use Node@14.x # 步骤2
-        uses: actions/setup-node@v1 # 作用：安装nodejs
-        with:
-           node-version: 14
+      # - name: Use Node@14.x # 步骤2
+      #   uses: actions/setup-node@v1 # 作用：安装nodejs
+      #   with:
+      #     node-version: 14
 
       # 2. 设置pnpm包管理器
       - name: Install pnpm
@@ -42,8 +42,8 @@ jobs:
         run: pnpm install
 
       # 当前模式直接执行脚本请求接口，因此不执行构建逻辑
-      - name: Build
-        run: pnpm build
+      # - name: Build
+      #   run: pnpm build
 
       # 5. 运行脚本
       - name: 运行脚本
